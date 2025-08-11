@@ -34,6 +34,33 @@ Uses the **DravidianCodeMix (2020)** dataset containing Tamil-English mixed sent
 >  Dataset is not included due to licensing. Instructions to download are given below.
 
 ---
+##  Pipeline
+Data Loading
+
+   ↓
+   
+Preprocessing (Cleaning + Emoji Removal + Token-Level Language Detection)
+
+   ↓
+   
+Synthetic Data Augmentation
+
+   ↓
+   
+TF-IDF Vectorization
+
+   ↓
+   
+Logistic Regression Classification
+
+   ↓
+   
+Neural Machine Translation (Helsinki-NLP MarianMT)
+
+   ↓
+   
+Evaluation (Classification Metrics + BLEU)
+
 
 ##  Installation
 ```python
@@ -55,17 +82,14 @@ pip install -r requirements.txt
 
 ### **Option 1: Run the Notebook**
 Open:
-```python
-[notebooks/main_pipeline.ipynb](notebooks/main_pipeline.ipynb)
-
-```
+[main_pipeline.ipynb](main_pipeline.ipynb)
 and run all cells in order.
 
 ### **Option 2: Python Script**
 If modularized into `src/`:
-```python
+
 python src/main.py
-```
+
 ---
 
 ##  Results
